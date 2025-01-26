@@ -26,6 +26,34 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Hamburger Menu
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    });
+});
+
 // Form submission handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
