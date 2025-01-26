@@ -104,7 +104,7 @@ body {
 .hero-text-container {
     max-width: 600px;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.8);
+    background: #f8e5e5;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
