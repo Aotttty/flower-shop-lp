@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORIYA | エレガントなフラワーショップ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">MORIYA</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#profile">店長プロフィール</a></li>
+                <li><a href="#products">商品一覧</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+                <li><a href="#support">ご注文に関する重要なご案内</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text-container">
+                <h1 class="fade-in">美しい花々で<br>特別な瞬間を</h1>
+                <p class="fade-in-delay">季節の花々を丁寧に選び抜き、<br>心を込めてお届けいたします</p>
+                <a href="#products" class="cta-button fade-in-delay">商品を見る</a>
+            </div>
+        </section>
+
+        <section id="profile" class="profile">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="https://p16-sign-sg.tiktokcdn.com/aweme/1080x1080/tos-alisg-avt-0068/7330868790990733332.jpeg?lk3s=a5d48078&nonce=92283&refresh_token=abea766511fb60a2901bf5304a68b1ee&x-expires=1738044000&x-signature=4%2B%2BOzRZbuP%2FRKYDOArySPseeJ%2F8%3D&shp=a5d48078&shcp=81f88b70" alt="店長プロフィール写真">
+                </div>
+                <div class="profile-content">
+                    <h2>店長プロフィール</h2>
+                    <p>パリで修行を積んだフローリストとして、一輪一輪の花に想いを込めて丁寧にアレンジしています。<br>
+                    お客様の大切な想いをお花に込めてお届けすることが私たちの喜びです。</p>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@moriyahana" target="_blank" class="social-icon tiktok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/moriyahana" target="_blank" class="social-icon instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/MORIYAHANA" target="_blank" class="social-icon youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://x.com/moriyahana" target="_blank" class="social-icon twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://line.me/R/ti/p/@331cvdby" target="_blank" class="social-icon line">
+                            <i class="fa-brands fa-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <h2>おすすめの商品</h2>
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=87433085" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/87433085_th.jpg?cmsp_timestamp=20230214153215" alt="プロポーズに最高級大輪赤バラ１０８本の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>プロポーズに最高級大輪赤バラ１０８本の花束</h3>
+                                    <p>65,340円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=39989854" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/39989854_th.jpg?cmsp_timestamp=20230214153542" alt="ハイグレード赤いバラ100本の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>ハイグレード赤いバラ100本の花束</h3>
+                                    <p>72,600円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=177524320" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/177524320_th.jpg?cmsp_timestamp=20240916161856" alt="プロポーズに最高級大輪赤バラ１０８本とかすみ草の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>プロポーズに最高級大輪赤バラ１０８本とかすみ草の花束</h3>
+                                    <p>82,328円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=172270043" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/172270043_th.jpg?cmsp_timestamp=20240916212925" alt="青バラとかすみ草の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>青バラとかすみ草の花束</h3>
+                                    <p>17,666円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=183742909" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/183742909_th.jpg?cmsp_timestamp=20241127135228" alt="青バラと水色バラのミックスブルーとかすみ草の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>青バラと水色バラのミックスブルーとかすみ草の花束</h3>
+                                    <p>17,666円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=178126116" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/178126116_th.jpg?cmsp_timestamp=20240916210704" alt="水色バラとかすみ草の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>水色バラとかすみ草の花束</h3>
+                                    <p>17,666円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="https://moriya.shop-pro.jp/?pid=179040424" target="_blank">
+                                <div class="product-image">
+                                    <img src="https://img16.shop-pro.jp/PA01096/857/product/179040424_th.jpg" alt="ホワイトローズとカスミ草の純白の花束">
+                                </div>
+                                <div class="product-info">
+                                    <h3>ホワイトローズとカスミ草の純白の花束</h3>
+                                    <p>20,000円(税込)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>MPRIYAについて</h2>
+                <p>パリで修行を積んだフローリストが、<br>一輪一輪心を込めて丁寧にアレンジいたします。</p>
+                <p>特別な日のギフトから、日常を彩る花々まで、<br>あなたの大切な瞬間のお手伝いをさせていただきます。</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>お問い合わせ</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="お名前" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="メールアドレス" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="メッセージ" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">送信する</button>
+            </form>
+        </section>
+
+        <section id="support" class="support">
+            <h2>ご注文に関する重要なご案内</h2>
+            <div class="support-links">
+                <div class="support-item">
+                    <a href="https://moriya.shop-pro.jp/?mode=f4" target="_blank">
+                        <h3>ご依頼について 〜初めての方へ〜</h3>
+                        <p>初めてご利用される方は、こちらをご確認ください。</p>
+                    </a>
+                </div>
+                <div class="support-item">
+                    <a href="https://moriya.shop-pro.jp/?mode=f3" target="_blank">
+                        <h3>花贈り 〜お届けについて〜</h3>
+                        <p>配送に関する重要な情報をご確認いただけます。</p>
+                    </a>
+                </div>
+                <div class="support-item">
+                    <a href="https://moriya.shop-pro.jp/?mode=f5" target="_blank">
+                        <h3>営業日 〜ご依頼前に確認〜</h3>
+                        <p>営業日・営業時間に関する情報をご確認ください。</p>
+                    </a>
+                </div>
+                <div class="support-item">
+                    <a href="https://moriya.shop-pro.jp/?mode=f6" target="_blank">
+                        <h3>ご依頼後に 〜当店から連絡がない方へ〜</h3>
+                        <p>ご注文後の流れについてご確認いただけます。</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>MORIYA</h3>
+                <p>〒150-0001<br>東京都渋谷区神宮前X-X-X</p>
+                <p>TEL: 03-XXXX-XXXX</p>
+            </div>
+
+
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MORIYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
