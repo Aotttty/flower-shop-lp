@@ -59,43 +59,104 @@ body {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-                url('https://source.unsplash.com/1600x900/?flowers') center/cover;
+    min-height: 700px;
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(34, 48, 78, 0.9), rgba(34, 48, 78, 0.7));
+    z-index: 2;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 3;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
+    color: #fff;
+}
+
+.hero-text-container {
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(34, 48, 78, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
     font-size: 3.5rem;
+    font-family: 'Noto Serif JP', serif;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    letter-spacing: 0.05em;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--secondary-color);
-    color: var(--white);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 30px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: all 0.3s ease;
+    z-index: -1;
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    background-color: #876868;
+    color: #22304e;
+}
+
+.cta-button:hover::before {
+    width: 100%;
 }
 
 .products {
@@ -255,7 +316,6 @@ body {
     background-color: #876868;
 }
 
-
 /* Support Section Styles */
 .support {
     padding: 80px 20px;
@@ -343,30 +403,37 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        min-height: 600px;
+        padding: 0 1rem;
+    }
+
+    .hero-text-container {
+        padding: 1.5rem;
+        margin: 0 auto;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
-    
-    .nav-links {
-        display: none;
+
+    .hero p {
+        font-size: 1.1rem;
     }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
     }
-    
-    .footer-social {
-        justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
     }
-    
-    .product-card {
-        width: 280px;
-    }
-    
-    .product-image {
-        height: 250px;
+
+    .hero p {
+        font-size: 1rem;
     }
 }
 
@@ -437,7 +504,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
 .social-icon.tiktok {
     background: #22304e;
 }
@@ -457,8 +523,6 @@ body {
 .social-icon.line {
     background: #22304e;
 }
-
-
 
 /* Responsive adjustments for profile section */
 @media (max-width: 768px) {
