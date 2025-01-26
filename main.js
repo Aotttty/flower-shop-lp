@@ -1,29 +1,61 @@
+// Scroll behavior for header
+let lastScroll = 0;
+let scrollTimer = null;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    const header = document.querySelector('.header');
+
+    // Add scrolled class when page is scrolled
+    if (currentScroll > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    // Handle scroll direction
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scrolling down
+        header.classList.add('scroll-down');
+        header.classList.remove('scroll-up');
+    } else {
+        // Scrolling up
+        header.classList.remove('scroll-down');
+        header.classList.add('scroll-up');
+    }
+
+    lastScroll = currentScroll;
+
+    // Clear the existing timer
+    if (scrollTimer !== null) {
+        clearTimeout(scrollTimer);
+    }
+
+    // Set a new timer
+    scrollTimer = setTimeout(() => {
+        header.classList.remove('scroll-down');
+        header.classList.add('scroll-up');
+    }, 150);
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            const headerOffset = document.querySelector('.header').offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
-});
-
-// Header scroll effect
-const header = document.querySelector('.header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        header.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
 });
 
 // Hamburger Menu
